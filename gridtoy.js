@@ -15,6 +15,7 @@ container.style.minWidth = "250px"
 const div1 = document.createElement('div')
 div1.setAttribute ('class', 'grid 1')
 div1.style.border = "2px solid red"
+div1.style.backgroundColor = "blue"
 div1.style.height = "100px"
 div1.style.width =  "100px"
 div1.style.margin = "10px"
@@ -51,5 +52,9 @@ const createBoxes = (container, num) => {
 createBoxes(container, 16)
 
 
+const changeColor = (el) => {
+    el.style.backgroundColor = "blue"
+}
 
+addEventListener("mouseover", (event) => {})
 
