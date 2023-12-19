@@ -40,7 +40,15 @@ const createBox = (container, newDiv) => {
     container.append(newDiv)
 }
 
+// function to create n number of boxes
 
+const createBoxes = (container, num) => {
+    for (let i = 0; i < num; i++) {
+        createBox(container, i)
+    }
+}
+
+createBoxes(container, 16)
 
 
 
