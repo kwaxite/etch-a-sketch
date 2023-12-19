@@ -40,9 +40,8 @@ const createBox = (container, newDiv) => {
     container.append(newDiv)
 }
 
-createBox(container)
-createBox(container)
-createBox(container)
+
+
 
 
 
