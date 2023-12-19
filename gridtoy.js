@@ -52,20 +52,21 @@ const createBoxes = (container, num) => {
 createBoxes(container, 16)
 
 // function to remove boxes
-const removeBoxes = () => {
-    while (container.lastChild){
-        container.lastChild.remove()
-    }
-}
-
-removeBoxes()
-
-createBoxes(container, 20)
-// function changes background colour 
-// const changeColor = (el) => {
-//     el.style.backgroundColor = "blue"
+// const removeBoxes = () => {
+//     while (container.lastChild){
+//         container.lastChild.remove()
+//     }
 // }
 
+// removeBoxes()
 
-// div2.addEventListener("mouseover", changeColor)
+// createBoxes(container, 20)
+
+// function changes background colour 
+const changeColor = (el) => {
+    el.target.style.backgroundColor = "blue"
+}
+
+
+div2.addEventListener("mouseover", changeColor)
 
