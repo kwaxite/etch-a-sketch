@@ -51,10 +51,21 @@ const createBoxes = (container, num) => {
 
 createBoxes(container, 16)
 
-
-const changeColor = (el) => {
-    el.style.backgroundColor = "blue"
+// function to remove boxes
+const removeBoxes = () => {
+    while (container.lastChild){
+        container.lastChild.remove()
+    }
 }
 
-addEventListener("mouseover", (event) => {})
+removeBoxes()
+
+createBoxes(container, 20)
+// function changes background colour 
+// const changeColor = (el) => {
+//     el.style.backgroundColor = "blue"
+// }
+
+
+// div2.addEventListener("mouseover", changeColor)
 
