@@ -29,6 +29,16 @@ div2.style.width =  "100px"
 div2.style.margin = "10px"
 container.append(div2)
 
+// function changes background colour 
+const changeColor = (el) => {
+    el.target.style.backgroundColor = "blue"
+}
+
+// function changes background colour to white
+const removeColor = (el) => {
+    el.target.style.backgroundColor = "white"
+}
+
 // function to create square boxes
 
 const createBox = (container, newDiv) => {
@@ -38,6 +48,8 @@ const createBox = (container, newDiv) => {
     newDiv.style.height = "100px"
     newDiv.style.width =  "100px"
     newDiv.style.margin = "10px"
+    newDiv.addEventListener("mouseover", changeColor)
+    newDiv.addEventListener("mouseout", removeColor)
     container.append(newDiv)
 }
 
@@ -62,11 +74,6 @@ createBoxes(container, 16)
 
 // createBoxes(container, 20)
 
-// function changes background colour 
-const changeColor = (el) => {
-    el.target.style.backgroundColor = "blue"
-}
 
 
-div2.addEventListener("mouseover", changeColor)
 
