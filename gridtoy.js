@@ -61,7 +61,7 @@ const removeBoxes = () => {
     }
 }
 
-removeBoxes()
+// removeBoxes()
 
 // header
 
@@ -70,8 +70,29 @@ header.style.cssText = "color:#1E75CC; font-size:3rem; font-family: 'Roboto', sa
 console.log(header)
 header.style.margin = "30px"
 
+// create buttons in sidebar
+
+const nav = document.querySelector('nav')
+console.log(nav)
+
+const displayButton = document.createElement('button')
+displayButton.setAttribute('class', 'btn display')
+const resetButton = document.createElement('button')
+resetButton.setAttribute('class', 'btn reset')
+
+nav.append(displayButton)
+nav.append(resetButton)
 
 
+console.log(resetButton)
+console.log(nav)
 
+displayButton.textContent = 'Number of squares'
+displayButton.style.cssText = "font-size: 1rem; background-color:yellow"
+displayButton.style.margin = "10px"
+displayButton.style.padding = "5px"
 
-
+resetButton.textContent = 'Reset'
+resetButton.style.cssText = "font-size: 1rem; background-color:lightgreen"
+resetButton.style.margin = "10px"
+resetButton.style.padding = "5px"
