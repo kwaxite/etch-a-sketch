@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -13,7 +15,22 @@ body {
     align-items: center;
 }
 
+main {
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+section {
+    display: flex;
+    
+}
+
+nav {
+    margin-right: 100px;
+}
 .container {
     outline: 2px solid blue;
     background-color: aqua;

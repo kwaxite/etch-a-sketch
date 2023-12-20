@@ -1,4 +1,4 @@
-
+// create container and set properties
 
 const container = document.querySelector('.container')
 console.log(container)
@@ -10,25 +10,6 @@ container.style.height = "480px"
 container.style.width = "480px"
 // container.style.gap = "1rem"
 container.style.flexWrap = "wrap"
-// container.style.minWidth = "250px"
-
-// Test div boxes
-// const div1 = document.createElement('div')
-// div1.setAttribute ('class', 'grid 1')
-// div1.style.border = "2px solid red"
-// div1.style.backgroundColor = "blue"
-// div1.style.height = "100px"
-// div1.style.width =  "100px"
-// div1.style.margin = "10px"
-// container.append(div1)
-
-// const div2 = document.createElement('div')
-// div2.setAttribute ('class', 'grid 1')
-// div2.style.border = "2px solid white"
-// div2.style.height = "100px"
-// div2.style.width =  "100px"
-// div2.style.margin = "10px"
-// container.append(div2)
 
 // function changes background colour 
 const changeColor = (el) => {
@@ -42,7 +23,7 @@ const removeColor = (el) => {
 
 
 
-// calculate dimensions of square 
+// calculate dimensions of each square 
 let  numOfSquares = 8
 const gridSize = 480
 let squareSize = 480/numOfSquares
@@ -68,22 +49,28 @@ const createBoxes = (container, num) => {
         for (let i = 0; i < num; i++){
             createBox(container, i)
         }
-        
     }
 }
 
 createBoxes(container, numOfSquares)
 
 // function to remove boxes
-// const removeBoxes = () => {
-//     while (container.lastChild){
-//         container.lastChild.remove()
-//     }
-// }
+const removeBoxes = () => {
+    while (container.lastChild){
+        container.lastChild.remove()
+    }
+}
 
-// removeBoxes()
+removeBoxes()
 
-// createBoxes(container, 20)
+// header
+
+const header = document.querySelector('.header')
+header.style.cssText = "color:#1E75CC; font-size:3rem; font-family: 'Roboto', sans-serif"
+console.log(header)
+header.style.margin = "30px"
+
+
 
 
 
