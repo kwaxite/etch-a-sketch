@@ -13,20 +13,20 @@ container.style.flexWrap = "wrap"
 
 // function changes background colour 
 const changeColor = (el) => {
-    el.target.style.backgroundColor = "blue"
+    el.target.style.backgroundColor = "black"
 }
 
 // function changes background colour to white
 const removeColor = (el) => {
-    el.target.style.backgroundColor = "white"
+    el.target.style.backgroundColor = generateRandomColor()
 }
 
 
 
 // calculate dimensions of each square 
-let  numOfSquares = 8
+let numOfSquares = 1
 const gridSize = 480
-let squareSize = 480/numOfSquares
+let squareSize = gridSize/numOfSquares
 
 // function to create square boxes
 const createBox = (container, newDiv) => {
@@ -52,7 +52,7 @@ const createBoxes = (container, num) => {
     }
 }
 
-createBoxes(container, numOfSquares)
+
 
 // function to remove boxes
 const removeBoxes = () => {
@@ -96,3 +96,32 @@ resetButton.textContent = 'Reset'
 resetButton.style.cssText = "font-size: 1rem; background-color:lightgreen"
 resetButton.style.margin = "10px"
 resetButton.style.padding = "5px"
+
+// prompt asking for the number of squares
+const displayGrid = () => {
+    numOfSquares = prompt("Enter number of squares from 1 and 100");
+    squareSize = gridSize/numOfSquares
+    createBoxes(container, numOfSquares)
+}
+
+displayButton.addEventListener('click',displayGrid)
+
+// reset grid
+
+const resetGrid = () => {
+    location.reload()
+}
+
+resetButton.addEventListener('click', resetGrid)
+
+// generate random color
+
+function generateRandomColor(){
+    let maxVal = 0xFFFFFF; // 16777215
+    let randomNumber = Math.random() * maxVal; 
+    randomNumber = Math.floor(randomNumber);
+    randomNumber = randomNumber.toString(16);
+    let randColor = randomNumber.padStart(6, 0);   
+    return `#${randColor.toUpperCase()}`
+}
+console.log(generateRandomColor()); 
