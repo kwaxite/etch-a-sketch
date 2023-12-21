@@ -124,6 +124,9 @@ resetButton.style.padding = "5px"
 // reveal white - prompt asking for the number of squares
 const displayGridWhite = () => {
     numOfSquares = prompt("Enter number of squares from 1 and 100");
+    while(numOfSquares < 1 || numOfSquares >100 || isNaN(numOfSquares)) {
+        numOfSquares = prompt("Invalid input, Enter a number from 1 and 100");
+    }
     squareSize = gridSize/numOfSquares
     whiteColorFill(container, numOfSquares)
 }
@@ -133,6 +136,9 @@ whiteColorButton.addEventListener('click',displayGridWhite)
 // reveal random color - prompt asking for the number of squares
 const displayGridColor = () => {
     numOfSquares = prompt("Enter number of squares from 1 and 100");
+    while(numOfSquares < 1 || numOfSquares >100 || isNaN(numOfSquares)) {
+        numOfSquares = prompt("Invalid input, Enter a number from 1 and 100");
+    }
     squareSize = gridSize/numOfSquares
     randomColorFill(container, numOfSquares)
 }
